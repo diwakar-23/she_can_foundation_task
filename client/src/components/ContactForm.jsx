@@ -43,14 +43,22 @@ const ContactForm = () => {
     setIsSubmitting(true);
     setSubmitStatus(null);
 
-    try {
-      const response = await fetch('http://localhost:5000/api/submissions', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
+    // try {
+    //   const response = await fetch('https://she-can-backend-wexr.onrender.com/, {
+    //     method: 'POST',
+    //     headers: { 'Content-Type': 'application/json' },
+    //     body: JSON.stringify(formData),
+    //   });
 
-      const data = await response.json();
+    //   const data = await response.json();
+    try {
+  const response = await fetch('https://she-can-backend-wexr.onrender.com/api/submissions', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(formData),
+  }); // <-- Pehle }, fir ) aur fir ;
+
+  const data = await response.json();
 
       if (response.ok) {
         setSubmitStatus('success');
@@ -65,7 +73,7 @@ const ContactForm = () => {
     }
   };
 
-
+z
   return (
     <div className="flex items-center justify-center min-h-[85vh] px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-md p-8 bg-white rounded-2xl shadow-xl shadow-slate-100 border border-slate-100/80 transition-all duration-300 hover:shadow-2xl hover:shadow-slate-200/60">

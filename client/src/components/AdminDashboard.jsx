@@ -9,7 +9,7 @@ const AdminDashboard = ({ onLogout }) => {
     const fetchSubmissions = async () => {
       const token = localStorage.getItem('adminToken');
       try {
-        const response = await fetch('http://localhost:5000/api/submissions', {
+        const response = await fetch('https://she-can-backend-wexr.onrender.com/', {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`
