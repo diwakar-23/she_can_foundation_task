@@ -15,7 +15,7 @@ const AdminLogin = ({ onLoginSuccess }) => {
     setError('');
 
     try {
-      const response = await fetch('https://she-can-backend-wexr.onrender.com/', {
+      const response = await fetch('https://she-can-backend-wexr.onrender.com/api/admin/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(credentials),
