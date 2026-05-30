@@ -73,7 +73,7 @@ const ContactForm = () => {
     }
   };
 
-z
+
   return (
     <div className="flex items-center justify-center min-h-[85vh] px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-md p-8 bg-white rounded-2xl shadow-xl shadow-slate-100 border border-slate-100/80 transition-all duration-300 hover:shadow-2xl hover:shadow-slate-200/60">
